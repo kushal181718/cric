@@ -1,0 +1,303 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    background-color: #010101;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles */
+header {
+    background-color: black;
+    color: white;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    font-family: "Unbounded";
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-family: 'Tektur', sans-serif;
+    font-weight: bolder;
+}
+
+.navbar-brand img {
+    height: 4rem;
+    margin-right: 10px;
+}
+
+.navbar-brand a {
+    color: #fafafa;
+    text-decoration: none;
+}
+
+.nav {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+}
+
+.nav li {
+    position: relative;
+}
+
+.nav li a {
+    color: rgb(77, 169, 250);
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.nav li a:hover {
+    color: rgb(3, 95, 232);
+}
+
+.nav a.active {
+    font-weight: bold;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: black;
+    list-style-type: none;
+    padding: 0.5rem 0;
+    margin: 0;
+    border: 1px solid #333;
+    border-radius: 5px;
+}
+
+.dropdown-menu li a {
+    color: rgb(243, 117, 63);
+    padding: 0.5rem 1rem;
+    display: block;
+    text-decoration: none;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #333;
+}
+
+.nav li:hover .dropdown-menu {
+    display: block;
+}
+
+.search-form {
+    display: flex;
+    flex: 1;
+    border: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-input {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 8px;
+}
+
+.search-form button {
+    background-color: rgb(11, 160, 235);
+    color: black;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    margin-left: 3px;
+    cursor: pointer;
+}
+
+.search-form button:hover {
+    background-color: #2583f7;
+}
+
+.arrow {
+    margin-left: 5px;
+}
+
+.user-actions {
+    display: flex;
+    align-items: center;
+}
+
+.username {
+    color: #fafafa;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-left: 7px;
+    margin-right: 17px;
+}
+
+.logout {
+    color: rgb(243, 117, 63);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.logout:hover {
+    color: #f06d4a;
+}
+
+#profile-img {
+    height: 2rem;
+    margin: 0%;
+}
+
+/* DASHBOARD */
+main.admin-page {
+    padding: 2rem;
+    font-family: 'Unbounded', sans-serif;
+}
+
+.admin-page h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.admin-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.admin-section {
+    width: 100%;
+    max-width: 400px;
+    padding: 1.5rem;
+    border-radius: 10px;
+    background-color: #333;
+    text-align: center;
+}
+
+.admin-section label {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    display: block;
+    text-align: left;
+}
+
+.admin-section input,
+.admin-section select {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    border: 1px solid #444;
+    background-color: #444;
+    color: #fff;
+    font-size: 1rem;
+    box-shadow: none;
+}
+
+.admin-section input[type="file"] {
+    display: none;
+}
+
+.file-upload-wrapper {
+    position: relative;
+    width: 100%;
+
+}
+
+.file-upload-button {
+    height: 3rem;
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 8px;
+    border: 1px solid #444;
+    background-color: #333;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: block;
+    text-align: center;
+}
+
+.file-upload-button:hover {
+    background-color: rgb(11, 160, 235);
+}
+
+.file-upload-button::before {
+    content: 'Choose File';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    color: #fff;
+}
+
+.file-upload-input {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.admin-section input:focus,
+.admin-section select:focus {
+    outline: none;
+    border-color: rgb(11, 160, 235);
+}
+
+.form-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.form-buttons button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-family: 'Unbounded';
+    color: #fff;
+    background-color: rgb(11, 160, 235);
+    font-size: 1.3rem;
+    transition: background-color 0.3s;
+}
+
+.form-buttons button:hover {
+    background-color: #2583f7;
+}
+
+.form-buttons button[type="reset"] {
+    background-color: #f44336;
+}
+
+.form-buttons button[type="reset"]:hover {
+    background-color: #e53935;
+}
+

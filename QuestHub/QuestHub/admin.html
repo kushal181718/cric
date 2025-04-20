@@ -1,0 +1,128 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['username'])) {
+    header("Location: login-1.php");
+    exit();
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Quest Hub</title>
+    <link rel="stylesheet" href="admin.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Tektur:wght@400..900&family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="container">
+                <div class="navbar-left">
+                    <div class="navbar-brand">
+                        <img id="logo-img" src="logo.png" alt="Logo">
+                        <a href="#">QUEST HUB</a>
+                    </div>
+                    <ul class="nav">
+                        <li><a href="#" class="active">Home</a></li>
+                        <li><a href="#">Top Picks</a></li>
+                        <li class="dropdown">
+                            <a href="#">Genres <span class="arrow">&#9662;</span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Shooting</a></li>
+                                <li><a href="#">Racing</a></li>
+                                <li><a href="#">Sports</a></li>
+                                <li><a href="#">Puzzle</a></li>
+                                <li><a href="#">Strategy</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <form class="search-form" role="search">
+                    <input type="text" class="search-input" placeholder="Search...">
+                    <button type="submit">🔍</button>
+                </form>
+                <div class="user-actions">
+                    <img id="profile-img" src="profile.png" alt="Logo">
+                    <span class="username"><?php echo $_SESSION['username']; ?></span>
+                    <a href="logout.php" class="logout">Logout</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="admin-page">
+        <h1>Dashboard</h1>
+        <div class="admin-content">
+            <div class="admin-section">
+                <label for="game-photo">Upload Game's Photo</label>
+                <div class="file-upload-wrapper">
+                    <input type="file" id="game-photo" name="game-photo" accept="image/*" class="file-upload-input">
+                    <label for="game-photo" class="file-upload-button"></label>
+                </div>
+            </div>
+
+            <div class="admin-section">
+                <label for="game-name">Game Name</label>
+                <input type="text" id="game-name" name="game-name" required>
+            </div>
+
+            <div class="admin-section">
+                <label for="awards-won">Awards Won</label>
+                <input type="text" id="awards-won" name="awards-won">
+            </div>
+
+            <div class="admin-section">
+                <label for="memory-size">Specifications</label>
+                <input type="text" id="memory-size" name="memory-size">
+            </div>
+
+            <div class="admin-section">
+                <label for="mode-type">Mode</label>
+                <select id="mode-type" name="mode-type">
+                    <option value="online">Online</option>
+                    <option value="offline">Offline</option>
+                </select>
+            </div>
+
+            <div class="admin-section">
+                <label for="genre">Genre</label>
+                <select id="genre" name="genre">
+                    <option value="shooting">Shooting</option>
+                    <option value="racing">Racing</option>
+                    <option value="sports">Sports</option>
+                    <option value="action">Action</option>
+                </select>
+            </div>
+
+            <div class="admin-section">
+                <label for="trailer-link">Trailer Link</label>
+                <input type="url" id="trailer-link" name="trailer-link">
+            </div>
+
+            <div class="admin-section">
+                <label for="ratings">Ratings (Stars)</label>
+                <select id="ratings" name="ratings">
+                    <option value="1">1 Star</option>
+                    <option value="2">2 Stars</option>
+                    <option value="3">3 Stars</option>
+                    <option value="4">4 Stars</option>
+                    <option value="5">5 Stars</option>
+                </select>
+            </div>
+
+
+        </div>
+        <div class="form-buttons">
+            <button type="submit">Add Game</button>
+            <button type="reset">Reset</button>
+        </div>
+    </main>
+</body>
+</html>

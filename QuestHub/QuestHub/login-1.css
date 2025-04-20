@@ -1,0 +1,222 @@
+body {
+    background: linear-gradient(135deg, #FA8914, #010101);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #FA8914, #010101);
+
+}
+
+.big-card {
+    width: 170vh;
+    height: 90vh;
+    border: none;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    border-radius: 50px;
+    background: linear-gradient(135deg,#FFC100,#FF8A08, #ec0202);
+}
+
+.small-card {
+    flex: 1; 
+    margin: 10px;
+    border: none;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+}
+
+#mall-card-1{
+    background-color: black;
+    color: white;
+}
+
+
+#small-card-2 {
+    background-image: url('152288.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#login-card{
+    height: 70%;
+    color: white;
+    /* background-color: black; */
+    width: 30rem;
+    margin-left: 3.8rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 15px;
+    font-family: "Tektur";
+}
+
+#Login-title{
+    font-size: 2rem;
+}
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+  /* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+  /* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+
+  /* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+
+#Welcome{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+
+#logo-img{
+    height: 6rem;
+}
+
+#title-name{
+    margin-top: 10px;
+    font-weight: 500;
+
+}
+
+#title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#title-left {
+    display: flex;
+    align-items: center;
+}
+
+#title-name {
+    margin-left: 0%;
+    font-size: 24px;
+    font-family: 'Tektur', sans-serif;
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+#title-right {
+    display: flex;
+    align-items: center;
+}
+
+.filter-label {
+    margin-right: 10px;
+    font-family: 'Tektur', sans-serif;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+}
+
+/* .form-group {
+    margin-bottom: 20px;
+} */
+
+input[type="text"],
+input[type="password"],
+button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#login-btn{
+    width: 107%;
+    background-color: #ff8400;
+    /* color: white; */
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(120deg, #ef9b40, #ff6f00);
+    font-family: "Tektur";
+    font-weight: 600;
+    font-size: larger;
+}
+
+
+button:hover {
+    background-color: #125eb0;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+a:hover {
+    text-decoration: underline;
+}
